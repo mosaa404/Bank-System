@@ -27,7 +27,7 @@ public class People {
     //DB Conection
    
     
-     public void UpdateBal() throws ClassNotFoundException, SQLException{
+   public void UpdateBal() throws ClassNotFoundException, SQLException{
 		Class.forName(DRIVER);
         Cursor = DriverManager.getConnection(URL, USER, PASSWORD);
         if (Cursor != null) {
@@ -36,7 +36,7 @@ public class People {
         State = Cursor.createStatement();
         float NewBalance=input.nextFloat();
         String email=input.next();
-        String query ="UPDATE `account` SET `Balance` = "+NewBalance+" WHERE `email` =" +email+"";
+        String query ="UPDATE account SET `Balance` = '"+NewBalance+"' WHERE email = '" +email+"'";
         State.executeUpdate(query);
 
 	}
