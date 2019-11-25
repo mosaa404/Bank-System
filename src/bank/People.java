@@ -25,8 +25,6 @@ public class People {
     Statement State = null;
 
     //DB Conection
-   
-    
    public void UpdateBal() throws ClassNotFoundException, SQLException{
 		Class.forName(DRIVER);
         Cursor = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -43,13 +41,11 @@ public class People {
 	//Command SQL Here 
         String query ="UPDATE account SET `Balance` = '"+NewBalance+"' WHERE email = '" +email+"'";
         State.executeUpdate(query);
-
 	}
+	
     //DB Close connection
     public void closeconnection() throws SQLException, Exception {
         State.close();
         Cursor.close();
     }
-
- 
 }
