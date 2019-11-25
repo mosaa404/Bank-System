@@ -13,7 +13,7 @@ public class People {
     protected int Age, Balance;
 
     People() throws IOException {
-
+	//Nothing For What!
     }
 
     //DB Configuration
